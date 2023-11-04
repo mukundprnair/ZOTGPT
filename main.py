@@ -1,8 +1,13 @@
 from parsing import *
 from chat_gpt import *
 
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
 if __name__ == "__main__":
     name = input("What's the name of the professor you're looking for?")
+
     parser = Parser(name)
     blurb = parser.return_blurb()
     user_req = input("What do you want the email to the professor to request from them? This can be anything, such as "

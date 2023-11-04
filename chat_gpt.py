@@ -7,7 +7,7 @@ import requests
 import json
 
 # Set your OpenAI API key
-api_key = "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"
+api_key = "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"
 
 # Define the API endpoint URL for the chat API
 api_url = "https://api.openai.com/v1/chat/completions"  # Replace with the appropriate engine URL
@@ -30,7 +30,7 @@ def chat_response(professor_data : str, user_req : str):
         {"role": "system", "content": "You are helping students write academic and professional emails to professor."},
         {"role": "user", "content": content}
     ],
-    "model": "gpt-3.5-turbo"
+    "model": "gpt-4"
     }
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -45,8 +45,9 @@ def chat_response(professor_data : str, user_req : str):
         result = response.json()
         assistant_reply = result["choices"][0]["message"]["content"]
         print("Assistant's Reply:", assistant_reply)
+        return assistant_reply
     else:
         print(f"Request failed with status code: {response.status_code}")
         print(response.text)
 
-    return response
+    return response.text
