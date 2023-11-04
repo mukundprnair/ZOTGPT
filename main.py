@@ -1,16 +1,13 @@
-# This is a sample Python script.
+from parsing import *
+from chat_gpt import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {Mahad}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    name = input("What's the name of the professor you're looking for?")
+    parser = Parser(name)
+    blurb = parser.return_blurb()
+    user_req = input("What do you want the email to the professor to request from them? This can be anything, such as "
+                     "'Request research opportunities', or 'Request a meeting for a particular date'")
+    print("Loading...")
+    response = chat_response(blurb, user_req)
+    print("This is your personalized email. Enjoy!")
+    print(response)

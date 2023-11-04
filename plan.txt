@@ -1,0 +1,38 @@
+Idea:
+has to be uci cs professors
+
+used for anything, can be used to reach out to the professors for anything
+    ex grad school, help, specific questions, research
+
+Input:
+what you want from the professor, and which professor 
+
+What our program does:
+1. Goes to professors blurb
+2. gives it to chatgpt so it cna understand what the professor does
+    - if prof doesn't have blurb, look for website?
+3. asks chat to create email based on what the user wants, and what the professor does.
+
+Output:
+generate email to send to professor using chat
+
+
+parsing file
+    Job: gets the professors description from the website
+    1 primary function
+
+    Inputs: Professor name
+    Outputs: blurb: str, empty string if no blurb
+
+
+chat file
+    A single function that outputs the final response to send str
+    Inputs:
+        professor data str
+        what the user wants str
+
+        What if the input is to large for gpt?
+            throw an error
+
+
+
