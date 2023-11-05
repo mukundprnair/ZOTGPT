@@ -1,4 +1,4 @@
-# hackathon
+# ZotGPT
 Introduction:
 
 ZotGPT allows students to generate emails to specific UCI professors that are part of the ICS department.
