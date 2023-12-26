@@ -2,6 +2,7 @@
 Introduction:
 
 ZotGPT allows students to generate emails to specific UCI professors that are part of the ICS department.
+Created by 3 UCI Computer Science students
 
 Features:
 
